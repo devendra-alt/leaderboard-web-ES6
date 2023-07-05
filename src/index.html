@@ -11,14 +11,26 @@
       <article id="leader-board">
         <div id="score-board">
           <h2 id="recent-score-title">Recent scores</h2>
-          <submit id="refresh-btn">Refresh</submit>
+          <button type="submit" id="refresh-btn">Refresh</button>
           <ul id="leader-board-list"></ul>
         </div>
         <form action="" id="leader-board-form">
-          <h2 id="add-score-title">add your score</h2>
-          <input type="text" name="user" id="name" class="form-inputs" />
-          <input type="number" name="score" id="score" class="form-inputs" />
-          <submit id="score-btn">Submit</submit>
+          <h2 id="data-entry-title">add your score</h2>
+          <input
+            type="text"
+            name="user"
+            id="name"
+            class="form-inputs"
+            placeholder="Your name"
+          />
+          <input
+            type="number"
+            name="score"
+            id="score"
+            class="form-inputs"
+            placeholder="Your score"
+          />
+          <button type="submit" id="score-btn">Submit</button>
         </form>
       </article>
     </main>

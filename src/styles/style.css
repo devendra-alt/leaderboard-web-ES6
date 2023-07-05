@@ -1,18 +1,72 @@
+main {
+  width: 100vw;
+  height: 100vh;
+}
+
 #leader-board-title {
   font-size: 4.8rem;
+  margin-left: 2.4rem;
 }
 
 #leader-board {
   display: flex;
   flex-direction: row;
   gap: 2.4rem;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px, rgb(51, 51, 51) 0 0 0 3px;
+  padding: 2.4rem;
+}
+
+#recent-score-title {
+  font-size: 1.8rem;
+  padding-right: 2.2rem;
+}
+
+#refresh-btn {
+  padding: 0.5rem 1.4rem 0.5rem 1.4rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#recent-score-title,
+#refresh-btn {
+  float: left;
+}
+
+#leader-board-list {
+  font-size: 1.4rem;
+  clear: both;
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+}
+
+#leader-board-form {
+  padding: 3.8rem;
+}
+
+#data-entry-title {
+  font-size: 2rem;
+  padding-bottom: 1.8rem;
 }
 
 .form-inputs {
   display: block;
   margin-bottom: 1.4rem;
+  width: 100%;
+  padding: 0.5rem;
 }
 
 .form-inputs[name='score'] {
   margin-bottom: 0;
+}
+
+#score-btn {
+  float: right;
+  margin-top: 1.4rem;
+  padding: 0.5rem;
+  background-color: #fff;
+  cursor: pointer;
 }
