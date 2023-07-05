@@ -8,13 +8,16 @@
   /* border: 1px solid red; */
 }
 
-/* font size */
+/* font & font size */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
 
 html {
   font-size: 10px;
+  font-family: 'Inter', sans-serif;
 }
 
-/* Remove default margin */
+/* Remove default margin and padding*/
 * {
   padding: 0;
   margin: 0;
