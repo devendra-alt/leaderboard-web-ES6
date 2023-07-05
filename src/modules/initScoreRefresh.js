@@ -1,5 +1,3 @@
-import renderScores from './render';
-
 const refreshBtn = document.querySelector('#refresh-btn');
 
 const initRefreshBtn = (game) => {

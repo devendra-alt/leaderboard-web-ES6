@@ -2,7 +2,7 @@ import './styles/reset.css';
 import './styles/style.css';
 import Game from './modules/game.js';
 import initScoreSubmit from './modules/initScoreSubmit.js';
-import initRefreshBtn from './modules/initScoreRefresh';
+import initRefreshBtn from './modules/initScoreRefresh.js';
 
 const game = new Game();
 

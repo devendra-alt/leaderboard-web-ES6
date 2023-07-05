@@ -1,13 +1,17 @@
-import renderScores from './render';
+import renderScores from './render.js';
+
 class Game {
   #GAME_ID;
+
   #URL_ENDPOINT;
+
   constructor() {
     this.#GAME_ID = 'El0O6fUr7GdLZJ5Aoxwm';
     this.#URL_ENDPOINT = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${
       this.#GAME_ID
     }/scores`;
   }
+
   getScores() {
     fetch(this.#URL_ENDPOINT)
       .then((response) => response.json())
@@ -15,6 +19,7 @@ class Game {
         renderScores(data.result);
       });
   }
+
   setScore(...data) {
     return fetch(this.#URL_ENDPOINT, {
       headers: {
