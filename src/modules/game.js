@@ -7,6 +7,13 @@ class Game {
       this.#GAME_ID
     }/scores`;
   }
+  getScores() {
+    fetch(this.#URL_ENDPOINT)
+      .then((response) => response.json())
+      .then((data) => {
+        renderScores(data.result);
+      });
+  }
       },
       {
         Name: 20,
