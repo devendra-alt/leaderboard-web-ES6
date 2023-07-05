@@ -1,10 +1,12 @@
 class Game {
-  #scores;
-
+  #GAME_ID;
+  #URL_ENDPOINT;
   constructor() {
-    this.#scores = [
-      {
-        Name: 100,
+    this.#GAME_ID = 'El0O6fUr7GdLZJ5Aoxwm';
+    this.#URL_ENDPOINT = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${
+      this.#GAME_ID
+    }/scores`;
+  }
       },
       {
         Name: 20,
