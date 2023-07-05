@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack serve"
+    "dev": "webpack serve",
+    "lint": "hint . && npx stylelint \"**/*.{css,scss}\" && eslint .",
+    "stylelint": "npx stylelint \"**/*.{css,scss}\" --fix"
   },
   "keywords": [],
   "author": "",
