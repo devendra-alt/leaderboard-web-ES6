@@ -1,0 +1,18 @@
+#leader-board-title {
+  font-size: 4.8rem;
+}
+
+#leader-board {
+  display: flex;
+  flex-direction: row;
+  gap: 2.4rem;
+}
+
+.form-inputs {
+  display: block;
+  margin-bottom: 1.4rem;
+}
+
+.form-inputs[name='score'] {
+  margin-bottom: 0;
+}
