@@ -14,26 +14,17 @@ class Game {
         renderScores(data.result);
       });
   }
+  setScore(...data) {
+    return fetch(this.#URL_ENDPOINT, {
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
       },
-      {
-        Name: 20,
-      },
-      {
-        Name: 50,
-      },
-      {
-        Name: 78,
-      },
-      {
-        Name: 125,
-      },
-      {
-        Name: 77,
-      },
-      {
-        Name: 42,
-      },
-    ];
+      method: 'POST',
+      body: JSON.stringify({
+        user: data[0],
+        score: data[1],
+      }),
+    });
   }
 
   getScores = () => this.#scores;
