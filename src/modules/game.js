@@ -27,8 +27,6 @@ class Game {
       }),
     });
   }
-
-  getScores = () => this.#scores;
 }
 
 export default Game;
