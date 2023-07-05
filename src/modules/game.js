@@ -1,3 +1,4 @@
+import renderScores from './render';
 class Game {
   #GAME_ID;
   #URL_ENDPOINT;
