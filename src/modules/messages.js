@@ -16,3 +16,16 @@ export const globalMessageCreater = () => {
   leaderBoardEl.prepend(messageBoxEl);
   globalMessageActionListner();
 };
+
+export const showMessageData = (message, classType) => {
+  const msgBox = document.querySelector('#message-context');
+  const messageBoxExitEl = document.createElement('img');
+  messageBoxExitEl.classList.add('global-message-exit-btn');
+  msgBox.classList.remove('hide');
+  msgBox.classList.add(classType);
+  messageBoxExitEl.setAttribute('global-message-exit', 'exit-msg');
+  msgBox.setAttribute('message-type', classType);
+  messageBoxExitEl.src = xImg;
+  msgBox.innerText = message;
+  msgBox.appendChild(messageBoxExitEl);
+};
