@@ -6,6 +6,8 @@ import initRefreshBtn from './modules/initScoreRefresh.js';
 
 const game = new Game();
 
+game.getScores();
+
 initScoreSubmit(game);
 initRefreshBtn(game);
 game.getScores();
