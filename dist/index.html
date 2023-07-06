@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboard app</title>
+  <script defer src="bundle.js"></script></head>
+  <body>
+    <main>
+      <h1 id="leader-board-title">Leaderboard</h1>
+      <article id="leader-board">
+        <div id="score-board">
+          <h2 id="recent-score-title">Recent scores</h2>
+          <button type="submit" id="refresh-btn">Refresh</button>
+          <ul id="leader-board-list"></ul>
+        </div>
+        <form action="" id="leader-board-form">
+          <h2 id="data-entry-title">add your score</h2>
+          <input
+            type="text"
+            name="user"
+            id="name"
+            class="form-inputs"
+            placeholder="Your name"
+            required
+          />
+          <input
+            type="number"
+            name="score"
+            id="score"
+            class="form-inputs"
+            placeholder="Your score"
+            required
+          />
+          <button type="submit" id="score-btn">Submit</button>
+        </form>
+      </article>
+    </main>
+  </body>
+</html>
