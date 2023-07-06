@@ -6,8 +6,8 @@ class Game {
   #URL_ENDPOINT;
 
   constructor() {
-    this.#GAME_ID = '8sPq9sRIt4FcSXjw6NPM';
-    this.#URL_ENDPOINT = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${
+    this.#GAME_ID = 'IIAuaFWhKHWwhkvhf6bC';
+    this.#API_ENDPOINT = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${
       this.#GAME_ID
     }/scores`;
   }
