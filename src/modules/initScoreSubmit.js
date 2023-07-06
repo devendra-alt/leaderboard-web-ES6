@@ -1,6 +1,9 @@
+import { showMessageData } from './messages';
+
 const listEl = document.querySelector('#score-btn');
 const userNameField = document.querySelector('#name');
 const scoreField = document.querySelector('#score');
+
 const initScoreSubmit = (game) => {
   listEl.addEventListener('click', async (e) => {
     e.preventDefault();
