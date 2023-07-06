@@ -16,6 +16,15 @@ main {
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px, rgb(51, 51, 51) 0 0 0 3px;
   padding: 2.4rem;
+  position: relative;
+}
+
+#score-board {
+  margin-top: 5rem;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
+    5px 5px 0px 0px;
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
 }
 
 #recent-score-title {
@@ -29,6 +38,7 @@ main {
   font-weight: 500;
   background-color: #fff;
   cursor: pointer;
+  margin-right: 1.4rem;
 }
 
 #recent-score-title,
@@ -41,6 +51,12 @@ main {
   clear: both;
   padding-top: 1.4rem;
   padding-bottom: 1.4rem;
+}
+.score-list-item {
+  padding: 0.8rem;
+}
+.score-list-item:nth-child(odd) {
+  background-color: #c0c0c0;
 }
 
 #leader-board-form {
@@ -57,6 +73,9 @@ main {
   margin-bottom: 1.4rem;
   width: 100%;
   padding: 0.5rem;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
+    5px 5px 0px 0px;
+  outline: none;
 }
 
 .form-inputs[name='score'] {
