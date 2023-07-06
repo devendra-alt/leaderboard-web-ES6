@@ -1,9 +1,10 @@
+import { showMessageData } from './messages.js';
 import renderScores from './render.js';
 
 class Game {
   #GAME_ID;
 
-  #URL_ENDPOINT;
+  #API_ENDPOINT;
 
   constructor() {
     this.#GAME_ID = 'IIAuaFWhKHWwhkvhf6bC';
@@ -14,8 +15,8 @@ class Game {
 
   async getScores() {
     try {
-      const respons = await fetch(this.#URL_ENDPOINT);
-      if (respons.status === 200) {
+      const respons = await fetch(this.#API_ENDPOINT);
+      if (respons.ok) {
         const data = await respons.json();
         renderScores(data.result);
         return;
