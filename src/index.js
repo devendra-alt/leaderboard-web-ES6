@@ -10,4 +10,3 @@ game.getScores();
 
 initScoreSubmit(game);
 initRefreshBtn(game);
-game.getScores();
