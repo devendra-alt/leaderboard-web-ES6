@@ -1,33 +1,44 @@
+import renderScores from './render.js';
+
 class Game {
-  #scores;
+  #GAME_ID;
+
+  #URL_ENDPOINT;
 
   constructor() {
-    this.#scores = [
-      {
-        Name: 100,
-      },
-      {
-        Name: 20,
-      },
-      {
-        Name: 50,
-      },
-      {
-        Name: 78,
-      },
-      {
-        Name: 125,
-      },
-      {
-        Name: 77,
-      },
-      {
-        Name: 42,
-      },
-    ];
+    this.#GAME_ID = '8sPq9sRIt4FcSXjw6NPM';
+    this.#URL_ENDPOINT = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${
+      this.#GAME_ID
+    }/scores`;
   }
 
-  getScores = () => this.#scores;
+  async getScores() {
+    try {
+      const respons = await fetch(this.#URL_ENDPOINT);
+      if (respons.status === 200) {
+        const data = await respons.json();
+        renderScores(data.result);
+        return;
+      }
+      throw new Error('unable to fetch data');
+    } catch (error) {
+      throw new Error('unknown error');
+    }
+  }
+
+  async setScore(...data) {
+    const respons = await fetch(this.#URL_ENDPOINT, {
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        user: data[0],
+        score: data[1],
+      }),
+    });
+    return respons;
+  }
 }
 
 export default Game;

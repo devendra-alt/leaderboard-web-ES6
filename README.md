@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 
-  <h3><b>Microverse README Template</b></h3>
+  <h3><b>Learderboard web ES6</b></h3>
 
 </div>
 
@@ -24,14 +24,13 @@
 - [🔭 Future Features](#future-features)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 leaderboard-web-ES6 <a name="about-project"></a>
 
-**Leaderboard-web-ES6** is a website where a user can add and see scores from diffrent player in a game.
+**Leaderboard-web-ES6** is a website where users can add and see scores from different game players.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -43,6 +42,7 @@
     <li><a href="#">HTML</a></li>
     <li><a href="#">CSS</a></li>
     <li><a href="#">JAVASCRIPT</a></li>
+    <li><a href="#">Webpack</a></li>
   </ul>
 </details>
 
@@ -51,8 +51,9 @@
 ### Key Features <a name="key-features"></a>
 
 - **API being used to get and post data**
-- **Added form for submiting data**
-- **Styled list accrodingly**
+- **Added form for submitting data**
+- **Styled list accordingly**
+  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
@@ -65,7 +66,7 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-To get a local copy up and running, follow these steps.
+If you would like to get a local copy up and running, please follow these steps.
 
 ### Prerequisites
 
@@ -88,7 +89,7 @@ Clone this repository to your desired folder:
 
 Install this project with:
 
-```sh
+```
   cd leaderboard-web-ES6
   npm i
 ```
@@ -124,8 +125,6 @@ You can deploy this project using:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
 👤 **Author1**
 
 - GitHub: [@githubhandle](https://github.com/devendra-alt)
@@ -158,9 +157,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project...
+If you like this project please start it
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -1,7 +1,12 @@
 import './styles/reset.css';
 import './styles/style.css';
 import Game from './modules/game.js';
-import renderScores from './modules/render.js';
+import initScoreSubmit from './modules/initScoreSubmit.js';
+import initRefreshBtn from './modules/initScoreRefresh.js';
 
 const game = new Game();
-renderScores(game);
+
+game.getScores();
+
+initScoreSubmit(game);
+initRefreshBtn(game);

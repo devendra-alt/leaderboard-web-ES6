@@ -1,13 +1,17 @@
 const leaderBoardList = document.querySelector('#leader-board-list');
+const createListItem = (userData) => {
+  const scoreListItemEl = document.createElement('li');
+  const userScoreEl = document.createElement('p');
+  userScoreEl.innerText = `${userData[0]} : ${userData[1]}`;
+  scoreListItemEl.appendChild(userScoreEl);
+  leaderBoardList.appendChild(scoreListItemEl);
+};
+
 const renderScores = (game) => {
-  game.getScores().forEach((element) => {
-    const scoreListItemEl = document.createElement('li');
-    const userScoreEl = document.createElement('p');
-    userScoreEl.innerText = `${Object.keys(element).toString()
-    } : ${
-      Object.values(element).toString()}`;
-    scoreListItemEl.appendChild(userScoreEl);
-    leaderBoardList.appendChild(scoreListItemEl);
+  leaderBoardList.innerHTML = '';
+  game.forEach((element) => {
+    const userData = Object.values(element).reverse();
+    createListItem(userData);
   });
 };
 
