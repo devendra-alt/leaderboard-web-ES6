@@ -1,21 +1,22 @@
+import { showMessageData } from './messages.js';
 import renderScores from './render.js';
 
 class Game {
   #GAME_ID;
 
-  #URL_ENDPOINT;
+  #API_ENDPOINT;
 
   constructor() {
-    this.#GAME_ID = '8sPq9sRIt4FcSXjw6NPM';
-    this.#URL_ENDPOINT = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${
+    this.#GAME_ID = 'IIAuaFWhKHWwhkvhf6bC';
+    this.#API_ENDPOINT = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${
       this.#GAME_ID
     }/scores`;
   }
 
   async getScores() {
     try {
-      const respons = await fetch(this.#URL_ENDPOINT);
-      if (respons.status === 200) {
+      const respons = await fetch(this.#API_ENDPOINT);
+      if (respons.ok) {
         const data = await respons.json();
         renderScores(data.result);
         return;
@@ -27,17 +28,27 @@ class Game {
   }
 
   async setScore(...data) {
-    const respons = await fetch(this.#URL_ENDPOINT, {
-      headers: {
-        'Content-Type': 'application/json; charset=utf-8',
-      },
-      method: 'POST',
-      body: JSON.stringify({
-        user: data[0],
-        score: data[1],
-      }),
-    });
-    return respons;
+    try {
+      const response = await fetch(this.#API_ENDPOINT, {
+        headers: {
+          'Content-Type': 'application/json; charset=utf-8',
+        },
+        method: 'POST',
+        body: JSON.stringify({
+          user: data[0],
+          score: data[1],
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(data.message);
+      }
+
+      const responseData = await response.json();
+      showMessageData(responseData.result, 'success');
+    } catch (error) {
+      throw new Error(error.message);
+    }
   }
 }
 

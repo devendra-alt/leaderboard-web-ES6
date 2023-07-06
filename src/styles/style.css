@@ -16,6 +16,19 @@ main {
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px, rgb(51, 51, 51) 0 0 0 3px;
   padding: 2.4rem;
+  position: relative;
+}
+
+#score-board {
+  margin-top: 5rem;
+  box-shadow:
+    1px 1px 0 0,
+    2px 2px 0 0,
+    3px 3px 0 0,
+    4px 4px 0 0,
+    5px 5px 0 0;
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
 }
 
 #recent-score-title {
@@ -29,6 +42,7 @@ main {
   font-weight: 500;
   background-color: #fff;
   cursor: pointer;
+  margin-right: 1.4rem;
 }
 
 #recent-score-title,
@@ -41,6 +55,14 @@ main {
   clear: both;
   padding-top: 1.4rem;
   padding-bottom: 1.4rem;
+}
+
+.score-list-item {
+  padding: 0.8rem;
+}
+
+.score-list-item:nth-child(odd) {
+  background-color: #c0c0c0;
 }
 
 #leader-board-form {
@@ -57,6 +79,13 @@ main {
   margin-bottom: 1.4rem;
   width: 100%;
   padding: 0.5rem;
+  box-shadow:
+    1px 1px 0 0,
+    2px 2px 0 0,
+    3px 3px 0 0,
+    4px 4px 0 0,
+    5px 5px 0 0;
+  outline: none;
 }
 
 .form-inputs[name='score'] {
@@ -69,4 +98,78 @@ main {
   padding: 0.5rem;
   background-color: #fff;
   cursor: pointer;
+}
+
+#refresh-btn,
+#score-btn {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow:
+    1px 1px 0 0,
+    2px 2px 0 0,
+    3px 3px 0 0,
+    4px 4px 0 0,
+    5px 5px 0 0;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#refresh-btn:active,
+#score-btn:active {
+  box-shadow: 0 0 0 0;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  #refresh-btn,
+  #score-btn {
+    padding: 0.25em 0.75em;
+  }
+}
+
+.global-message-context {
+  position: absolute;
+  top: 1.2rem;
+  width: 80%;
+  margin: 0 auto;
+  height: 3.2rem;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: center;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.global-message-exit-btn {
+  width: 1.4rem;
+  height: 1.4rem;
+  display: inline;
+  margin-left: 4rem;
+  cursor: pointer;
+}
+
+.error {
+  background-color: rgb(255, 184, 184);
+}
+
+.success {
+  background-color: rgb(148, 255, 148);
+}
+
+.hide {
+  display: none;
 }
