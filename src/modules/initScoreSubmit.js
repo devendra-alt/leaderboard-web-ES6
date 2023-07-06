@@ -1,4 +1,4 @@
-import { showMessageData } from './messages';
+import { showMessageData } from './messages.js';
 
 const listEl = document.querySelector('#score-btn');
 const userNameField = document.querySelector('#name');

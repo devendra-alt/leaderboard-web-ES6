@@ -1,4 +1,5 @@
 import xImg from '../assets/x.png';
+
 const leaderBoardEl = document.querySelector('#leader-board');
 const globalMessageActionListner = () => {
   leaderBoardEl.addEventListener('click', (e) => {

@@ -3,7 +3,7 @@ import './styles/style.css';
 import Game from './modules/game.js';
 import initScoreSubmit from './modules/initScoreSubmit.js';
 import initRefreshBtn from './modules/initScoreRefresh.js';
-import { globalMessageCreater } from './modules/messages';
+import { globalMessageCreater } from './modules/messages.js';
 
 const game = new Game();
 

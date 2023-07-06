@@ -45,7 +45,6 @@ class Game {
       }
 
       const responseData = await response.json();
-      console.log(responseData);
       showMessageData(responseData.result, 'success');
     } catch (error) {
       throw new Error(error.message);
