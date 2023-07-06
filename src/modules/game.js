@@ -27,17 +27,28 @@ class Game {
   }
 
   async setScore(...data) {
-    const respons = await fetch(this.#URL_ENDPOINT, {
-      headers: {
-        'Content-Type': 'application/json; charset=utf-8',
-      },
-      method: 'POST',
-      body: JSON.stringify({
-        user: data[0],
-        score: data[1],
-      }),
-    });
-    return respons;
+    try {
+      const response = await fetch(this.#API_ENDPOINT, {
+        headers: {
+          'Content-Type': 'application/json; charset=utf-8',
+        },
+        method: 'POST',
+        body: JSON.stringify({
+          user: data[0],
+          score: data[1],
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(data.message);
+      }
+
+      const responseData = await response.json();
+      console.log(responseData);
+      showMessageData(responseData.result, 'success');
+    } catch (error) {
+      throw new Error(error.message);
+    }
   }
 }
 
