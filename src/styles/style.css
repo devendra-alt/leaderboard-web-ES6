@@ -103,3 +103,40 @@ main {
     padding: 0.25em 0.75em;
   }
 }
+
+.global-message-context {
+  position: absolute;
+  top: 1.2rem;
+  width: 80%;
+  margin: 0 auto;
+  height: 3.2rem;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: center;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.global-message-exit-btn {
+  width: 1.4rem;
+  height: 1.4rem;
+  display: inline;
+  margin-left: 4rem;
+  cursor: pointer;
+}
+
+.error {
+  background-color: rgb(255, 184, 184);
+}
+
+.success {
+  background-color: rgb(148, 255, 148);
+}
+
+.hide {
+  display: none;
+}
