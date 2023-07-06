@@ -12,12 +12,18 @@ class Game {
     }/scores`;
   }
 
-  getScores() {
-    fetch(this.#URL_ENDPOINT)
-      .then((response) => response.json())
-      .then((data) => {
+  async getScores() {
+    try {
+      const respons = await fetch(this.#URL_ENDPOINT);
+      if (respons.status === 200) {
+        const data = await respons.json();
         renderScores(data.result);
-      });
+        return;
+      }
+      throw new Error('unable to fetch data');
+    } catch (error) {
+      throw new Error('unknown error');
+    }
   }
 
   setScore(...data) {
