@@ -26,8 +26,8 @@ class Game {
     }
   }
 
-  setScore(...data) {
-    return fetch(this.#URL_ENDPOINT, {
+  async setScore(...data) {
+    const respons = await fetch(this.#URL_ENDPOINT, {
       headers: {
         'Content-Type': 'application/json; charset=utf-8',
       },
@@ -37,6 +37,7 @@ class Game {
         score: data[1],
       }),
     });
+    return respons;
   }
 }
 
